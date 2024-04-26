@@ -6,7 +6,12 @@ import ThemeSetter from "~/components/theme-setter";
 export default function Home() {
   return (
     <>
-      <div className="container relative hidden h-[800px] flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-3 lg:px-0">
+      <div className="container h-[100vh] flex md:hidden">
+        <p className="text-3xl text-foreground my-auto">
+          El onboarding sólo funciona en un dispositivo de escritorio 💻
+        </p>
+      </div>
+      <div className="container hidden relative h-[800px] flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-3 lg:px-0">
         <ThemeSetter />
         <div className="relative hidden h-[100vh] flex-col p-10 text-white lg:flex dark:border-r col-span-1">
           <div className="absolute inset-0 bg-muted" />
@@ -36,16 +41,7 @@ export default function Home() {
               <OnboardingSteps />
             </div>
             <p className="px-8 text-center text-sm text-muted-foreground">
-              Al utilizar este servicio, aceptas nuestros{" "}
-              <Link
-                href="https://app.plumaa.id/terms"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-4 hover:text-primary"
-              >
-                Términos de Servicio
-              </Link>{" "}
-              and{" "}
+              Al utilizar este servicio, aceptas nuestro{" "}
               <Link
                 href="https://app.plumaa.id/privacy"
                 target="_blank"
@@ -53,6 +49,15 @@ export default function Home() {
                 className="underline underline-offset-4 hover:text-primary"
               >
                 Aviso de Privacidad
+              </Link>{" "}
+              y{" "}
+              <Link
+                href="https://app.plumaa.id/terms"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 hover:text-primary"
+              >
+                Términos y Condiciones
               </Link>
               .
             </p>

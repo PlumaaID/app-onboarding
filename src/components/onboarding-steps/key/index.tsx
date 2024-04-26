@@ -60,11 +60,10 @@ const Key: FC<Props> = ({ goToNextStep, goToPreviousStep, current }) => {
               <QRCode value={base64File} />
             </div>
             <p className="px-8 text-center text-sm text-muted-foreground">
-              Escanea este QR desde el setup en la app de Plumaa ID para
-              transferirla.
+              Escanea este QR desde el setup en la app de Plumaa ID
             </p>
             <Button onClick={goToNextStep} variant="secondary">
-              Siguiente <ArrowRight className="h-4 w-4 ml-2" />
+              ¡Listo! <ArrowRight className="h-4 w-4 ml-2" />
             </Button>
           </>
         )}
